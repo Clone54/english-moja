@@ -95,7 +95,7 @@ const displayLessons = (lessons) => {
     const lessonsContainer = document.getElementById("level-container");
     lessonsContainer.innerHTML = "";
     const lessonDiv = document.createElement("ul");
-    lessonDiv.classList.add("flex", "flex-row", "justify-center", "items-center", "gap-4", "p-2", "shadow", "bg-base-100", "rounded-box", "w-full", "max-w-6xl");
+    lessonDiv.classList.add("grid", "grid-cols-4",  "md:grid-cols-7", "justify-center", "items-center", "gap-4", "p-2", "shadow", "bg-base-100", "rounded-box", "w-full", "max-w-6xl");
     lessons.data.forEach(lesson => {
         const li = document.createElement("li");
 
