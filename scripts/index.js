@@ -124,3 +124,22 @@ document.getElementById("btn-search").addEventListener("click", () => {
         displayWords({data: filteredWords});
     });
 })
+
+const toggles = document.querySelectorAll('.faq-toggle');
+
+toggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        const answer = toggle.nextElementSibling;
+        const icon = toggle.querySelector('.icon');
+
+        answer.classList.toggle('hidden');
+
+        if (answer.classList.contains('hidden')) {
+            icon.textContent = '+';
+            icon.style.transform = 'rotate(0deg)';
+        } else {
+            icon.textContent = '−'; 
+            icon.style.transform = 'rotate(180deg)';
+        }
+    });
+});
